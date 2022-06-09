@@ -36,9 +36,8 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Set environment variables
       env:
-        API_KEY: abcd
-      run: |
-        echo "${{API_KEY}}"
+        API_KEY: abc
+      run: echo "hello $API_KEY"
     - name: Test with pytest
       run: |
         pytest
