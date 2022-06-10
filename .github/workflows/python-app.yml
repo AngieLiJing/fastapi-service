@@ -16,7 +16,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    timeout-minutes: 2
+    timeout-minutes: 1
 
     steps:
     - uses: actions/checkout@v3
@@ -32,9 +32,10 @@ jobs:
 
     - name: Test with pytest
       timeout-minutes: 1
-      run: pytest -s
+      run: |
+        echo 'current path'
+        pwd
+        uvicorn main:app
+        pytest -s
 
-    - name: Finished pytest
-      if: always()
-      run: echo 'finished'
 
