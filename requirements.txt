@@ -1,3 +1,5 @@
 fastapi
 pytest
 requests
+pytest-cov
+nest_asyncio
