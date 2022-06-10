@@ -30,14 +30,14 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Test with pytest
-      timeout-minutes: 1
+    - name: Start server
       run: |
         echo 'current path'
         pwd
         echo 'change directory'
         cd src
         uvicorn main:app
-        pytest -s
+    - name: Run pytest cases
+      run: pytest -s
 
 
