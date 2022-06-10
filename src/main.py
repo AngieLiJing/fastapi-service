@@ -1,13 +1,13 @@
 import asyncio
+from time import time
 
 import uvicorn as uvicorn
 from fastapi import FastAPI
-import nest_asyncio
 
 from controller_impl import ControllerImpl
 
 app = FastAPI()
-nest_asyncio.apply()
+
 
 @app.get('/hello')
 def hello():
@@ -15,10 +15,15 @@ def hello():
 
 controller_impl = ControllerImpl()
 
-@app.get('/links')
-async def get_links():
-    r = await controller_impl.get_links()
-    return {'msg':'ok'}
+
+
+
+@app.get('/')
+async def f():
+    start = time()
+    res = await controller_impl.task()
+    print("time: ", time() - start)
+    return {'res': res}
 
 
 
