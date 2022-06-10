@@ -35,6 +35,8 @@ jobs:
       run: |
         echo 'current path'
         pwd
+        echo 'change directory'
+        cd src
         uvicorn main:app
         pytest -s
 
