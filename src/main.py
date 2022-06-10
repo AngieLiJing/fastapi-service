@@ -18,7 +18,7 @@ controller_impl = ControllerImpl()
 
 
 
-@app.get('/')
+@app.get('/world')
 async def f():
     start = time()
     res = await controller_impl.task()
