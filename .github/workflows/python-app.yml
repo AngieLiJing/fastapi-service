@@ -33,3 +33,8 @@ jobs:
     - name: Test with pytest
       timeout-minutes: 1
       run: pytest -s
+
+    - name: Finished pytest
+      if: always()
+      run: echo 'finished'
+
