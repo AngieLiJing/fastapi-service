@@ -1,5 +1,6 @@
-fastapi
-pytest
-requests
+fastapi == 0.78.0
+pytest == 7.1.2
+nest_asyncio == 1.5.5
 pytest-cov
-nest_asyncio
+
+requests
