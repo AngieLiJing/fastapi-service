@@ -3,7 +3,6 @@ name: Prepare Data on Merge to Master
 on:
   pull_request:
     types: [closed]
-    branches: [main]
 
 jobs:
   prepare_data:
