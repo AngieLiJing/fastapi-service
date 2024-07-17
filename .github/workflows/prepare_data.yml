@@ -6,6 +6,7 @@ on:
     branches-ignore:
       - main
 
+
 jobs:
   prepare_data:
     if: github.event.pull_request.merged == true
