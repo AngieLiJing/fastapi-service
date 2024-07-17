@@ -1,2 +1,2 @@
-with open('a.txt', 'w') as f:
+with open('src/a.txt', 'w') as f:
     pass
